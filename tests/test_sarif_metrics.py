@@ -21,7 +21,10 @@ def test_normalize_prefers_score_over_level():
 
 
 def test_compute_metrics_on_samples():
-    docs = LocalSarifSource(sarif_dir="samples").load_documents()
+    from pathlib import Path
+
+    sarif_dir = Path(__file__).resolve().parents[1] / "samples"
+    docs = LocalSarifSource(sarif_dir=str(sarif_dir)).load_documents()
     m = compute_metrics(docs)
 
     # 4 (codeql) + 3 (semgrep) = 7 findings
