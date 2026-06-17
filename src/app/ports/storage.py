@@ -1,3 +1,5 @@
 from typing import Protocol, Any
+
+
 class JsonStorePort(Protocol):
-	def put_json(self, key: str, payload: Any) -> None: ...
+    def put_json(self, key: str, payload: Any) -> None: ...

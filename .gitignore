@@ -1,9 +1,54 @@
-# Python
+# Python - Virtual Environments
 .venv/
+venv/
+env/
+ENV/
+
+# Python - Bytecode & Cache
 __pycache__/
 *.pyc
-pytest_cache/
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Python - Testing & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+
+# Python - Type Checking & Linting
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pylint_cache/
+.ruff_cache/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 .DS_Store
+Thumbs.db
+
+# Environment Variables & Local Config
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# AWS
+.aws/
+aws_credentials.json
 
 # Terraform
 **/.terraform/
@@ -12,6 +57,18 @@ pytest_cache/
 **/terraform.tfstate.*
 **/*.tfvars
 **/*.tfvars.json
+**/terraform.tfplan
+**/*.tfplan
 
 # Build artifacts
 infra/terraform/modules/**/build/
+
+# OS Files
+.DS_Store
+.AppleDouble
+.LSOverride
+*.lnk
+
+# Logs
+*.log
+logs/
